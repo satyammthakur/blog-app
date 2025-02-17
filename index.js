@@ -8,7 +8,7 @@ import blogRoute from "./routes/blog.routes.js";
 import { checkForAuthenticationCookie } from "./middlewares/auth.middleware.js";
 import Blog from "./models/blog.models.js";
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.set("view engine" ,"ejs");
 app.set("views" , path.resolve("./views"))
